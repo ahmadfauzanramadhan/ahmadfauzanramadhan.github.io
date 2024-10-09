@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beliebers Merchandise Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="logo">Beliebers Shop</div>
+        <nav id="navbar">
+            <ul id="menu-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#order-section">Pesan Merchandise</a></li>
+            </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <h1>Welcome to Beliebers Merchandise Shop</h1>
+            <p>Dapatkan merchandise resmi Justin Bieber di sini!</p>
+            <button onclick="showPopup()">Lihat Promo</button>
+        </section>
+        
+        <section class="products">
+            <h2>Produk Terbaru</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="media/9c2b3f07-2c3a-464a-818d-2a11d23ad5a3-removebg-preview.png" alt="T-shirt Justin Bieber">
+                    <h3>T-shirt Justin Bieber</h3>
+                    <p>Harga: Rp150.000</p>
+                </div>
+                <div class="product">
+                    <img src="media/il_570xN.5408273111_skf6-removebg-preview.png" alt="Hoodie Justin Bieber">
+                    <h3>Hoodie Justin Bieber</h3>
+                    <p>Harga: Rp300.000</p>
+                </div>
+                <div class="product">
+                    <img src="media/id-11134207-7qul7-ljex8jbyfzzha6_tn-removebg-preview.png" alt="Topi Justin Bieber">
+                    <h3>Topi Justin Bieber</h3>
+                    <p>Harga: Rp100.000</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="order-section">
+        <h2 style="text-align: center;">Formulir Pemesanan Merchandise</h2>
+        <form id="order-form">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama Anda" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email Anda" required><br><br>
+
+            <label for="produk">Pilih Produk:</label>
+            <select id="produk" name="produk" required>
+                <option value="T-shirt Justin Bieber">T-shirt Justin Bieber</option>
+                <option value="Hoodie Justin Bieber">Hoodie Justin Bieber</option>
+                <option value="Topi Justin Bieber">Topi Justin Bieber</option>
+            </select><br><br>
+
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" min="1" value="1" required><br><br>
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+        <div id="order-result"></div>
+    </section>
+
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Nama: Ahmad Fauzan Ramadhan</p>
+        <p>Saya baru berumur 19 tahun, masuk Informatika karena pertama senang ngoding hehe.</p>
+    </section>
+
+    <div id="popup-box" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h3 style="color: bisque;">Promo Spesial!</h3>
+            <p style="color: bisque;">Beli 2 gratis 1 untuk semua merchandise hingga akhir bulan ini!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Beliebers Shop | Semua hak dilindungi</p>
+        <div class="social-media">
+            <a href="#">Instagram</a> | <a href="#">Twitter</a> | <a href="#">Facebook</a>
+        </div>
+    </footer>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Ubah ke Dark Mode</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
